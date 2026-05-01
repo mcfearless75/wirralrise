@@ -182,8 +182,8 @@
     }
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 1rem; }
     .logo { display: flex; align-items: center; gap: 0.65rem; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--navy); white-space: nowrap; }
-    .logo-badge { width: 40px; height: 40px; background: linear-gradient(135deg, var(--teal), var(--blue)); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .logo-badge svg { width: 22px; height: 22px; fill: #fff; }
+    .logo-badge { width: 44px; height: 44px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; background: var(--navy); }
+    .logo-badge img { width: 44px; height: 44px; object-fit: cover; }
     .nav-links { display: flex; align-items: center; gap: 0.2rem; }
     .nav-links a { font-weight: 700; font-size: 0.88rem; color: var(--text-mid); padding: 0.45rem 0.85rem; border-radius: var(--r-sm); transition: color var(--t), background var(--t); cursor: pointer; }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
@@ -335,7 +335,8 @@
       display: flex; align-items: center; gap: 3rem;
       margin-top: 4rem;
     }
-    .cookie-paw { font-size: 4.5rem; line-height: 1; flex-shrink: 0; }
+    .cookie-paw { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid var(--yellow); }
+    .cookie-paw img { width: 110px; height: 110px; object-fit: cover; object-position: top center; }
     .cookie-content h3 { color: #B7770D; margin-bottom: 0.5rem; font-size: 1.5rem; }
     .cookie-content p { color: var(--text-mid); margin: 0; max-width: 60ch; }
 
@@ -390,7 +391,8 @@
       transition: box-shadow var(--t), transform var(--t);
     }
     .tcard:hover { box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-    .tavatar { width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2'; font-size: 1.5rem; font-weight: 800; color: #fff; }
+    .tavatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2'; font-size: 1.5rem; font-weight: 800; color: #fff; overflow: hidden; }
+    .tavatar img { width: 80px; height: 80px; object-fit: cover; object-position: top center; border-radius: 50%; }
     .av1 { background: linear-gradient(135deg, var(--navy), var(--blue)); }
     .av2 { background: linear-gradient(135deg, var(--teal), #0fa07e); }
     .av3 { background: linear-gradient(135deg, var(--blue), #8E44AD); }
@@ -496,7 +498,7 @@
     <div class="nav-wrap">
       <a class="logo" href="#home" aria-label="Wirral Rise — go to homepage">
         <div class="logo-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14l-4-4 1.41-1.41L10 13.17l6.59-6.59L18 8l-8 8z"/></svg>
+          <img src="https://static.wixstatic.com/media/83a797_decaacd7939f4e7f93cb4dce426b02a1~mv2.png/v1/fill/w_88,h_88,al_c,q_85,usm_0.66_1.00_0.01/wirralrise1.png" alt="" width="44" height="44">
         </div>
         Wirral Rise
       </a>
@@ -713,6 +715,10 @@
         </div>
       </div>
       <div class="quote-card">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;border-radius:var(--r-lg);overflow:hidden;">
+          <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_400,h_240,al_c,q_85,usm_0.66_1.00_0.01/activity1.jpg" alt="Children enjoying outdoor learning activities at Wirral Rise" width="200" height="120" loading="lazy" style="border-radius:var(--r-md);width:100%;height:120px;object-fit:cover;">
+          <img src="https://static.wixstatic.com/media/83a797_75956416b74749c8b23a1943e2678156~mv2.jpg/v1/fill/w_400,h_240,al_c,q_85,usm_0.66_1.00_0.01/activity2.jpg" alt="Children learning and playing at Wirral Rise therapeutic hub" width="200" height="120" loading="lazy" style="border-radius:var(--r-md);width:100%;height:120px;object-fit:cover;">
+        </div>
         <blockquote>"Wirral Rise aims to offer a safe, nurturing and structured environment for children whose needs cannot be fully met in mainstream settings."</blockquote>
         <div class="qpts" role="list">
           <div class="qpt" role="listitem"><div class="qpt-dot" style="background:var(--teal)" aria-hidden="true"></div> EHCP Sections E &amp; F aligned learning plans</div>
@@ -726,7 +732,9 @@
 
     <!-- Cookie Banner -->
     <div class="cookie-banner" role="region" aria-label="Meet Cookie, our therapy dog">
-      <div class="cookie-paw" aria-hidden="true" role="img" aria-label="Paw print">🐾</div>
+      <div class="cookie-paw" role="img" aria-label="Cookie the therapy dog">
+        <img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_220,h_220,al_c,q_85,usm_0.66_1.00_0.01/cookie.jpg" alt="Cookie the Wirral Rise therapy dog" width="110" height="110" loading="lazy">
+      </div>
       <div class="cookie-content">
         <h3>Meet Cookie — Our Therapy Dog</h3>
         <p>Cookie is a very important member of the Wirral Rise team. She's warm, gentle and brilliant at helping children feel calm and at ease the moment they walk through the door. A lot of our children say she's their favourite thing about coming in — and honestly, we can't argue with that.</p>
@@ -903,25 +911,25 @@
     </div>
     <div class="team-grid" role="list">
       <article class="tcard" role="listitem">
-        <div class="tavatar av1" aria-hidden="true">JF</div>
+        <div class="tavatar av1"><img src="https://static.wixstatic.com/media/83a797_7672a22b93a14caa8fd5c02477da75b1~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Jayne Foley, Director of Wirral Rise" width="80" height="80"></div>
         <h3>Jayne Foley</h3>
         <p class="trole">Director</p>
         <span class="tqual">Designated Safeguarding Lead (DSL)</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av2" aria-hidden="true">MJ</div>
+        <div class="tavatar av2"><img src="https://static.wixstatic.com/media/83a797_97a353ad5c1d44658b70d5f2f629140c~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Mike Jones, Provision Lead" width="80" height="80"></div>
         <h3>Mike Jones</h3>
         <p class="trole">Provision Lead</p>
         <span class="tqual">Deputy DSL (DDSL)</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av3" aria-hidden="true">SM</div>
+        <div class="tavatar av3"><img src="https://static.wixstatic.com/media/83a797_e0030e51bb9f4cb3b665a23c762a9eaf~mv2.jpeg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Sam McHugh, Neurodevelopmental Practitioner" width="80" height="80"></div>
         <h3>Sam McHugh</h3>
         <p class="trole">Neurodevelopmental Practitioner &amp; Learning Facilitator</p>
         <span class="tqual">SENDCO</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av4" aria-hidden="true">CD</div>
+        <div class="tavatar av4"><img src="https://static.wixstatic.com/media/83a797_a485911ff5084576befe80268e27df71~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Cath Downs, Neurodevelopmental Practitioner" width="80" height="80"></div>
         <h3>Cath Downs</h3>
         <p class="trole">Neurodevelopmental Practitioner &amp; Learning Facilitator</p>
       </article>
@@ -937,7 +945,7 @@
         <span class="tqual">Neurodevelopmental Practitioner</span>
       </article>
       <article class="tcard" role="listitem" style="grid-column: 2 / span 2;">
-        <div class="tavatar av-dog" aria-label="Cookie the therapy dog" role="img">🐾</div>
+        <div class="tavatar av-dog"><img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/cookie.jpg" alt="Cookie the therapy dog at Wirral Rise" width="80" height="80"></div>
         <h3>Cookie</h3>
         <p class="trole">Official Therapy Dog &amp; Chief Morale Officer</p>
         <span class="tqual">Head of Wellbeing</span>
