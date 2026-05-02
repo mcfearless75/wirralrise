@@ -582,6 +582,110 @@
     .logo-badge { width: 52px !important; height: 52px !important; border-radius: var(--r-md) !important; background: #fff !important; padding: 4px; }
     .logo-badge img { width: 44px !important; height: 44px !important; object-fit: contain !important; }
 
+    /* ===== BENEFITS OF AP ===== */
+    .benefits { background: var(--white); }
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .benefit-card {
+      border-radius: var(--r-xl); padding: 2rem; border: 1.5px solid var(--border);
+      background: var(--bg); position: relative; overflow: hidden;
+      transition: box-shadow var(--t), transform var(--t), border-color var(--t);
+      cursor: default;
+    }
+    .benefit-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: transparent; }
+    .benefit-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .benefit-card:nth-child(1)::before { background: var(--teal); }
+    .benefit-card:nth-child(2)::before { background: var(--blue); }
+    .benefit-card:nth-child(3)::before { background: var(--amber); }
+    .benefit-card:nth-child(4)::before { background: var(--purple); }
+    .benefit-card:nth-child(5)::before { background: var(--green); }
+    .benefit-card:nth-child(6)::before { background: var(--navy); }
+    .benefit-num {
+      font-family: 'Baloo 2', sans-serif; font-size: 2.8rem; font-weight: 800;
+      line-height: 1; color: rgba(27,58,92,0.07); margin-bottom: 0.75rem;
+    }
+    .benefit-card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--navy); }
+    .benefit-card p { font-size: 0.91rem; color: var(--text-mid); margin: 0; max-width: none; }
+    @media (max-width: 900px) { .benefit-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .benefit-grid { grid-template-columns: 1fr; } }
+
+    /* ===== DOWNLOAD BANNER ===== */
+    .dl-banner {
+      background: linear-gradient(135deg, var(--navy), #1B4F6D);
+      border-radius: var(--r-xl); padding: 2.5rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem;
+    }
+    .dl-banner-text h3 { color: #fff; margin-bottom: 0.4rem; }
+    .dl-banner-text p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin: 0; max-width: 55ch; }
+    .btn-dl {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--yellow); color: var(--navy); font-family: 'Baloo 2', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 0.9rem 2rem;
+      border-radius: var(--r-pill); white-space: nowrap; flex-shrink: 0;
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+    }
+    .btn-dl:hover { background: #e6c01a; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(244,208,63,0.45); }
+    .btn-dl svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ===== CONTACT FORM ===== */
+    .ct-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-field label { font-size: 0.82rem; font-weight: 800; color: rgba(255,255,255,0.65); letter-spacing: 0.06em; text-transform: uppercase; }
+    .form-field input, .form-field select, .form-field textarea {
+      background: rgba(255,255,255,0.10); border: 1.5px solid rgba(255,255,255,0.2);
+      border-radius: var(--r-md); padding: 0.75rem 1rem;
+      font-family: 'Nunito', sans-serif; font-size: 0.96rem; color: #fff;
+      transition: border-color var(--t), background var(--t);
+      outline: none; width: 100%;
+    }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .form-field select option { background: var(--navy); color: #fff; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: var(--yellow); background: rgba(255,255,255,0.14);
+    }
+    .form-field textarea { resize: vertical; min-height: 110px; }
+    .form-submit { margin-top: 0.25rem; }
+    .form-note { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+      background: linear-gradient(135deg, var(--teal) 0%, #0fa07e 100%);
+      padding: 4rem 0;
+    }
+    .nl-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 3rem; flex-wrap: wrap;
+    }
+    .nl-text h2 { color: #fff; margin-bottom: 0.4rem; font-size: clamp(1.4rem, 3vw, 2rem); }
+    .nl-text p { color: rgba(255,255,255,0.85); margin: 0; max-width: 44ch; }
+    .nl-form { display: flex; gap: 0.75rem; flex-wrap: wrap; flex-shrink: 0; }
+    .nl-form input[type="email"] {
+      background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.35);
+      border-radius: var(--r-pill); padding: 0.8rem 1.4rem;
+      font-family: 'Nunito', sans-serif; font-size: 1rem; color: #fff;
+      width: 260px; outline: none;
+      transition: border-color var(--t), background var(--t);
+    }
+    .nl-form input[type="email"]::placeholder { color: rgba(255,255,255,0.55); }
+    .nl-form input[type="email"]:focus { border-color: var(--yellow); background: rgba(255,255,255,0.24); }
+    .nl-form button {
+      background: var(--yellow); color: var(--navy); font-family: 'Baloo 2', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 0.8rem 1.75rem;
+      border-radius: var(--r-pill); border: none; cursor: pointer;
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+      white-space: nowrap;
+    }
+    .nl-form button:hover { background: #e6c01a; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+    @media (max-width: 768px) {
+      .nl-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .nl-form input[type="email"] { width: 100%; }
+      .dl-banner { flex-direction: column; align-items: flex-start; padding: 2rem; }
+    }
+
     /* ===== A11Y ===== */
     :focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
@@ -1137,7 +1241,10 @@
         </ul>
         <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
           <a href="#contact" class="btn btn-navy">Discuss a Referral</a>
-          <a href="#contact" class="btn btn-ghost-navy">Download Info Pack</a>
+          <a href="wirralrise-statement-of-services.docx" download class="btn btn-ghost-navy" aria-label="Download Wirral Rise Statement of Services Word document">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Statement of Services
+          </a>
         </div>
       </div>
       <div>
@@ -1172,6 +1279,62 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS OF ALTERNATIVE PROVISION ===== -->
+<section class="benefits" aria-labelledby="ben-h2">
+  <div class="container">
+    <div class="sh">
+      <span class="lbl lbl-navy">Why Alternative Provision Works</span>
+      <h2 id="ben-h2">Benefits of Sending Primary Children with Neurodevelopmental Diagnoses to Alternative Provision</h2>
+      <p>Research and practice consistently show that the right specialist placement at the right time makes a transformative difference — for the child, for the family, and for the placing school.</p>
+    </div>
+
+    <!-- Statement of services download banner -->
+    <div class="dl-banner" role="region" aria-label="Download Statement of Services">
+      <div class="dl-banner-text">
+        <h3>Wirral Rise Statement of Services</h3>
+        <p>Download our full Statement of Services — a comprehensive overview of our provision, approach, team, referral process and curriculum offer. Ideal for SENCos, local authority commissioners and families.</p>
+      </div>
+      <a href="wirralrise-statement-of-services.docx" download class="btn-dl" aria-label="Download Wirral Rise Statement of Services Word document">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download (.docx)
+      </a>
+    </div>
+
+    <div class="benefit-grid" role="list">
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">01</div>
+        <h3>Experienced and Specialist Staff</h3>
+        <p>Staff in alternative provisions have deep expertise in neurodevelopmental conditions such as autism, ADHD and PDA. Children receive targeted, knowledgeable support from practitioners who truly understand their profile — not generalist provision stretched to fit.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">02</div>
+        <h3>Reduced Pressure on Mainstream Schools</h3>
+        <p>Senior leaders are no longer tied up managing complex, high-need presentations. The whole-school environment becomes calmer and more focused, benefiting every pupil — while the child with complex needs gets the specialist input they actually require.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">03</div>
+        <h3>Preventing Escalation of Mental Health Difficulties</h3>
+        <p>By providing the right support early, alternative provision can prevent the escalation of anxiety, demand avoidance and emotional dysregulation. Early intervention is far more effective — and far less costly — than crisis intervention later.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">04</div>
+        <h3>A Bespoke Curriculum Tailored to Individual Needs</h3>
+        <p>Alternative provisions offer a flexible, individualised curriculum built around each child's EHCP outcomes, learning style, interests and current capacity. Children engage, progress and — crucially — enjoy learning again.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">05</div>
+        <h3>Reducing Disruption to Whole-Class Learning</h3>
+        <p>With children receiving targeted support in a suitable specialist setting, the mainstream classroom becomes a more consistent and settled learning environment for all pupils — a benefit that extends to teachers, TAs and the wider school community.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <div class="benefit-num">06</div>
+        <h3>Increased Long-Term Educational Engagement</h3>
+        <p>Children who receive appropriate specialist support in primary school are significantly more likely to remain engaged in education at secondary level and beyond. The investment made now pays dividends for the rest of a child's educational journey.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -1218,21 +1381,45 @@
         </div>
       </div>
       <div>
-        <div class="ct-cta-card">
-          <h3>Ready to Make a Referral?</h3>
-          <p>Give us a call or drop us an email and we'll get back to you quickly to have a friendly chat about next steps. No jargon, no pressure — just a conversation.</p>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-            <a href="tel:+447515117816" class="btn btn-amber" aria-label="Call Wirral Rise">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-              Call Now
-            </a>
-            <a href="mailto:admin@wirralrise.com" class="btn btn-ghost" aria-label="Email Wirral Rise">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Send an Email
-            </a>
+        <form class="ct-form" action="https://formspree.io/f/xbdqewpv" method="POST" aria-label="Contact form" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="ct-name">Your Name</label>
+              <input type="text" id="ct-name" name="name" placeholder="e.g. Sarah Jones" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="ct-phone">Phone Number</label>
+              <input type="tel" id="ct-phone" name="phone" placeholder="07xxx xxxxxx" autocomplete="tel">
+            </div>
           </div>
-        </div>
-        <div class="ct-map" role="region" aria-label="Map of Wirral Rise location">
+          <div class="form-field">
+            <label for="ct-email">Email Address</label>
+            <input type="email" id="ct-email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="ct-who">I am a…</label>
+            <select id="ct-who" name="enquiry_type" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="parent">Parent / Carer</option>
+              <option value="school">School / SENCo</option>
+              <option value="la">Local Authority</option>
+              <option value="professional">Other Professional</option>
+              <option value="other">Just curious</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="ct-message">Your Message</label>
+            <textarea id="ct-message" name="message" placeholder="Tell us a little about your child or enquiry — no pressure, we're here to help." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-amber" style="width:100%; justify-content:center; font-size:1.05rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="width:18px;height:18px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </div>
+          <p class="form-note">We'll get back to you within one working day. No jargon, no pressure — just a friendly chat.</p>
+        </form>
+        <div class="ct-map" role="region" aria-label="Map of Wirral Rise location" style="margin-top:1.25rem;">
           <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           <p>143–145 Ford Road, Upton Village, Wirral CH49 0XB</p>
           <a href="https://maps.google.com/?q=143-145+Ford+Road+Upton+Village+Wirral+CH49+0XB" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="margin:0 auto; font-size:0.9rem;" aria-label="Open location in Google Maps">
@@ -1243,6 +1430,24 @@
     </div>
   </div>
 </section>
+
+<!-- ===== NEWSLETTER ===== -->
+<div class="newsletter" role="region" aria-labelledby="nl-h2">
+  <div class="container">
+    <div class="nl-inner">
+      <div class="nl-text">
+        <span class="lbl lbl-white" style="margin-bottom:0.6rem;">Stay Informed</span>
+        <h2 id="nl-h2">Be the First to Know</h2>
+        <p>Sign up to our newsletter for updates on places, events and news from the Wirral Rise team — including Cookie.</p>
+      </div>
+      <form class="nl-form" action="https://formspree.io/f/xbdqewpv" method="POST" aria-label="Newsletter signup">
+        <input type="hidden" name="enquiry_type" value="newsletter">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+        <button type="submit" aria-label="Subscribe to newsletter">Subscribe Now</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
