@@ -391,8 +391,8 @@
       transition: box-shadow var(--t), transform var(--t);
     }
     .tcard:hover { box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-    .tavatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2'; font-size: 1.5rem; font-weight: 800; color: #fff; overflow: hidden; }
-    .tavatar img { width: 80px; height: 80px; object-fit: cover; object-position: top center; border-radius: 50%; }
+    .tavatar { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2'; font-size: 1.9rem; font-weight: 800; color: #fff; overflow: hidden; border: 4px solid var(--border); }
+    .tavatar img { width: 120px; height: 120px; object-fit: cover; object-position: top center; border-radius: 50%; }
     .av1 { background: linear-gradient(135deg, var(--navy), var(--blue)); }
     .av2 { background: linear-gradient(135deg, var(--teal), #0fa07e); }
     .av3 { background: linear-gradient(135deg, var(--blue), #8E44AD); }
@@ -512,21 +512,70 @@
     /* ===== PHOTO STRIP ===== */
     .photo-strip { background: var(--navy-dark); padding: 0; overflow: hidden; }
     .photo-strip-track {
-      display: flex; gap: 0; overflow-x: auto;
+      display: flex; gap: 3px; overflow-x: auto;
       scrollbar-width: none; -ms-overflow-style: none;
     }
     .photo-strip-track::-webkit-scrollbar { display: none; }
-    .photo-strip-item { flex: 0 0 300px; height: 220px; overflow: hidden; position: relative; cursor: pointer; }
-    .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, filter 0.4s ease; filter: brightness(0.88) saturate(1.1); }
-    .photo-strip-item:hover img { transform: scale(1.08); filter: brightness(1) saturate(1.3); }
+    .photo-strip-item { flex: 0 0 440px; height: 380px; overflow: hidden; position: relative; cursor: pointer; }
+    .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease, filter 0.5s ease; filter: brightness(0.85) saturate(1.15); }
+    .photo-strip-item:hover img { transform: scale(1.06); filter: brightness(1.05) saturate(1.3); }
     .photo-strip-item::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(27,58,92,0.5) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(18,40,64,0.65) 0%, rgba(18,40,64,0.1) 55%, transparent 100%);
       pointer-events: none;
     }
+
+    /* ===== IMAGE FEATURE SECTION ===== */
+    .img-feature { background: var(--bg-warm); padding: 4.5rem 0; }
+    .img-feature-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 260px 260px;
+      gap: 12px;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+    }
+    .img-feature-grid .ig-main {
+      grid-row: 1 / 3;
+      position: relative; overflow: hidden;
+    }
+    .img-feature-grid .ig-cell {
+      position: relative; overflow: hidden;
+    }
+    .ig-main img, .ig-cell img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease; display: block;
+    }
+    .ig-main:hover img, .ig-cell:hover img { transform: scale(1.05); }
+    .ig-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(18,40,64,0.75) 0%, transparent 100%);
+      padding: 1.5rem 1.25rem 1rem;
+      font-family: 'Baloo 2', sans-serif; font-weight: 700;
+      font-size: 0.9rem; color: #fff; pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+      .img-feature-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px;
+      }
+      .img-feature-grid .ig-main { grid-row: 1 / 2; grid-column: 1 / 3; }
+    }
     @media (max-width: 768px) {
-      .photo-strip-item { flex: 0 0 240px; height: 170px; }
+      .photo-strip-item { flex: 0 0 280px; height: 240px; }
       .hero-wm { width: 300px; height: 300px; right: -30px; opacity: 0.05; }
+      .img-feature-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+      }
+    }
+    @media (max-width: 480px) {
+      .img-feature-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 200px);
+      }
+      .img-feature-grid .ig-main { grid-column: 1; grid-row: 1; }
     }
 
     /* ===== IMPROVED NAV LOGO ===== */
@@ -712,6 +761,39 @@
   </div>
 </div>
 
+<!-- ===== LIFE AT WIRRAL RISE IMAGE FEATURE ===== -->
+<section class="img-feature" aria-labelledby="imgfeat-h2">
+  <div class="container">
+    <div class="sh">
+      <span class="lbl lbl-amber">Life at Wirral Rise</span>
+      <h2 id="imgfeat-h2">A Warm, Busy, Brilliant Place to Be</h2>
+      <p>Our hub is cosy and calm — full of learning, laughter and a very friendly dog. Here's a little glimpse inside.</p>
+    </div>
+    <div class="img-feature-grid">
+      <div class="ig-main">
+        <img src="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_900,h_700,al_c,q_85,usm_0.66_1.00_0.01/hub-main.jpg" alt="The Wirral Rise therapeutic learning hub interior" loading="lazy">
+        <div class="ig-caption">Our Therapeutic Hub in Upton Village</div>
+      </div>
+      <div class="ig-cell">
+        <img src="https://static.wixstatic.com/media/83a797_a5082089203b488b9b776d2b60d016b6~mv2.jpeg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/learning.jpg" alt="Child learning at Wirral Rise" loading="lazy">
+        <div class="ig-caption">Hands-on Learning</div>
+      </div>
+      <div class="ig-cell">
+        <img src="https://static.wixstatic.com/media/83a797_1346a042c23b46c7b171f1391ce0cc90~mv2.jpeg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/activity3.jpg" alt="Children doing activities at Wirral Rise" loading="lazy">
+        <div class="ig-caption">Creative Activities</div>
+      </div>
+      <div class="ig-cell">
+        <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/outdoor.jpg" alt="Outdoor play and learning at Wirral Rise" loading="lazy">
+        <div class="ig-caption">Outdoor Play &amp; Nature</div>
+      </div>
+      <div class="ig-cell">
+        <img src="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/hub2.jpg" alt="Wirral Rise learning environment" loading="lazy">
+        <div class="ig-caption">Calm, Safe Spaces</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOR KIDS / FOR GROWN-UPS ===== -->
 <section class="for-who" aria-labelledby="forwhoh2">
   <div class="container">
@@ -797,9 +879,10 @@
         </div>
       </div>
       <div class="quote-card">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;border-radius:var(--r-lg);overflow:hidden;">
-          <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_400,h_240,al_c,q_85,usm_0.66_1.00_0.01/activity1.jpg" alt="Children enjoying outdoor learning activities at Wirral Rise" width="200" height="120" loading="lazy" style="border-radius:var(--r-md);width:100%;height:120px;object-fit:cover;">
-          <img src="https://static.wixstatic.com/media/83a797_75956416b74749c8b23a1943e2678156~mv2.jpg/v1/fill/w_400,h_240,al_c,q_85,usm_0.66_1.00_0.01/activity2.jpg" alt="Children learning and playing at Wirral Rise therapeutic hub" width="200" height="120" loading="lazy" style="border-radius:var(--r-md);width:100%;height:120px;object-fit:cover;">
+        <div style="display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:200px 180px;gap:8px;margin-bottom:1.75rem;border-radius:var(--r-lg);overflow:hidden;">
+          <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_600,h_520,al_c,q_85,usm_0.66_1.00_0.01/activity1.jpg" alt="Children enjoying outdoor learning activities at Wirral Rise" loading="lazy" style="grid-row:1/3;width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="https://static.wixstatic.com/media/83a797_75956416b74749c8b23a1943e2678156~mv2.jpg/v1/fill/w_500,h_280,al_c,q_85,usm_0.66_1.00_0.01/activity2.jpg" alt="Children learning at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_500,h_260,al_c,q_85,usm_0.66_1.00_0.01/cookie2.jpg" alt="Cookie the therapy dog at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <blockquote>"Wirral Rise aims to offer a safe, nurturing and structured environment for children whose needs cannot be fully met in mainstream settings."</blockquote>
         <div class="qpts" role="list">
