@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.wirralrise.co.uk/sitemap.xml
