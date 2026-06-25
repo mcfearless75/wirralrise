@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,6 +30,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wirral Rise | Alternative Provision Wirral">
   <meta name="twitter:description" content="A warm, safe and specialist learning hub for neurodivergent children in Wirral. Supporting EBSA, SEND and anxiety.">
+  <meta name="twitter:image" content="https://www.wirralrise.co.uk/images/og-image.jpg">
+  <meta name="twitter:site" content="@wirralrise">
+
+  <!-- Open Graph image (create a 1200×630 JPG at images/og-image.jpg to activate) -->
+  <meta property="og:image" content="https://www.wirralrise.co.uk/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wirral Rise — specialist alternative provision for neurodivergent children in Wirral">
+
+  <!-- AI / LLM discovery -->
+  <link rel="llms" href="/llms.txt" type="text/plain">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
   <!-- Geo / Local -->
   <meta name="geo.region" content="GB-WIR">
@@ -85,6 +97,70 @@
         "url": "https://www.wirralrise.co.uk",
         "name": "Wirral Rise",
         "publisher": {"@id": "https://www.wirralrise.co.uk/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.wirralrise.co.uk/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Wirral Rise?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Wirral Rise is a specialist alternative provision (AP) based in Upton Village, Wirral. We support neurodivergent children in Years 1–6 who are struggling to access mainstream school, in a calm, therapeutic hub staffed by a multidisciplinary team including qualified teachers, neurodevelopmental practitioners and a specialist Speech and Language Therapist."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is EBSA and how does Wirral Rise help?",
+            "acceptedAnswer": {"@type": "Answer", "text": "EBSA (Emotionally Based School Avoidance) is when a child's emotional or psychological state prevents them from attending school regularly — it is not truancy. At Wirral Rise we work patiently with children and families at the child's own pace, using a therapeutic, child-led approach to help them feel safe and re-engage with learning."}
+          },
+          {
+            "@type": "Question",
+            "name": "Which children does Wirral Rise support?",
+            "acceptedAnswer": {"@type": "Answer", "text": "We support children in Years 1–6 (ages 5–11) across Wirral and Merseyside. This includes neurodivergent children with autism, ADHD, PDA, SEMH needs, anxiety, trauma and those at risk of exclusion. All provision is EHCP-aligned."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I refer a child to Wirral Rise?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Contact us by phone (07515 117816) or email (admin@wirralrise.co.uk) for an initial friendly, no-obligation conversation. You then share relevant documents (EHCP, school reports, assessments), attend a settling visit at our hub, and agree a funded placement with the school and local authority. We make the process as simple and stress-free as possible."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does Wirral Rise accept LA-funded EHCP placements?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Wirral Rise works with Wirral Council and other local authorities to support LA-funded placements for children with Education, Health and Care Plans (EHCPs). We work closely with schools, families and the LA throughout the process."}
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Wirral Rise located?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Wirral Rise is based at 143–145 Ford Road, Upton Village, Wirral, CH49 0XB — a calm, homely hub that feels nothing like a traditional classroom. We serve families across Wirral, Birkenhead, Wallasey and the wider Merseyside area."}
+          },
+          {
+            "@type": "Question",
+            "name": "What year groups does Wirral Rise support?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Wirral Rise supports children in Years 1 to 6, covering primary school ages 5 to 11."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does Wirral Rise have qualified teachers and therapists?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our multidisciplinary team (MDT) includes qualified teachers, neurodevelopmental practitioners, a specialist Speech and Language Therapist (SaLT), a Designated Safeguarding Lead (DSL) and a Deputy DSL. All provision is EHCP-aligned to Sections E and F."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is Cookie at Wirral Rise?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Cookie is Wirral Rise's resident therapy dog — a warm, gentle presence who helps children feel calm and settled from the moment they arrive. Many of our children say Cookie is their favourite thing about coming in."}
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.wirralrise.co.uk/#team",
+        "name": "Wirral Rise Team",
+        "member": [
+          {"@type": "Person", "name": "Jayne Foley", "jobTitle": "Director", "description": "Designated Safeguarding Lead (DSL)"},
+          {"@type": "Person", "name": "Mike Jones", "jobTitle": "Provision Lead", "description": "Deputy DSL (DDSL)"},
+          {"@type": "Person", "name": "Sam McHugh", "jobTitle": "Neurodevelopmental Practitioner and Learning Facilitator", "description": "SENDCO"},
+          {"@type": "Person", "name": "Cath Downs", "jobTitle": "Neurodevelopmental Practitioner and Learning Facilitator"},
+          {"@type": "Person", "name": "Hayley Jennings", "jobTitle": "Neurodevelopmental Practitioner and Learning Facilitator"},
+          {"@type": "Person", "name": "Anoushka Shewhorak", "jobTitle": "Specialist Speech and Language Therapist and Neurodevelopmental Practitioner"}
+        ]
       }
     ]
   }
@@ -695,6 +771,12 @@
     /* ===== A11Y ===== */
     :focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+
+    /* ===== FORM STATES ===== */
+    .form-success { background: rgba(39,174,96,0.15); border: 1.5px solid rgba(39,174,96,0.4); border-radius: var(--r-md); padding: 1.5rem; text-align: center; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 1.05rem; color: #fff; margin-top: 0.5rem; }
+    .form-error { background: rgba(231,76,60,0.15); border: 1.5px solid rgba(231,76,60,0.4); border-radius: var(--r-md); padding: 0.85rem 1rem; font-size: 0.9rem; font-weight: 700; color: #fff; margin-top: 0.5rem; }
+    .nl-success { background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.5); border-radius: var(--r-pill); padding: 0.8rem 1.75rem; font-family: 'Baloo 2', sans-serif; font-weight: 800; color: #fff; font-size: 1rem; }
+    button[disabled] { opacity: 0.65; cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -743,7 +825,7 @@
       <div>
         <div class="hero-live" aria-label="Now accepting referrals">
           <div class="hero-live-dot" aria-hidden="true"></div>
-          Now Accepting Referrals for 2024/25
+          Now Accepting Referrals for 2025/26
         </div>
         <h1 id="hero-h1">A Warm, Safe Place to&nbsp;Learn and&nbsp;Grow</h1>
         <p class="hero-sub">Specialist alternative provision for neurodivergent children in Wirral</p>
@@ -845,28 +927,28 @@
 <div class="photo-strip" role="region" aria-label="Photos from Wirral Rise">
   <div class="photo-strip-track">
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/activity.jpg" alt="Children enjoying outdoor learning at Wirral Rise" loading="lazy">
+      <img src="images/activity.jpg" fetchpriority="high" alt="Children enjoying outdoor learning at Wirral Rise" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_75956416b74749c8b23a1943e2678156~mv2.jpg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/play.jpg" alt="Children playing at Wirral Rise therapeutic hub" loading="lazy">
+      <img src="images/play.jpg" alt="Children playing at Wirral Rise therapeutic hub" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_a5082089203b488b9b776d2b60d016b6~mv2.jpeg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/learning.jpg" alt="Learning activities at Wirral Rise" loading="lazy">
+      <img src="images/learning.jpg" alt="Learning activities at Wirral Rise" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_1346a042c23b46c7b171f1391ce0cc90~mv2.jpeg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/activity3.jpg" alt="Wirral Rise children's activity session" loading="lazy">
+      <img src="images/activity3.jpg" alt="Wirral Rise children's activity session" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/hub.jpg" alt="Wirral Rise therapeutic hub environment" loading="lazy">
+      <img src="images/hub.jpg" alt="Wirral Rise therapeutic hub environment" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/hub2.jpg" alt="Wirral Rise learning environment" loading="lazy">
+      <img src="images/hub2.jpg" alt="Wirral Rise learning environment" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_2175f1fa08f149b7808772a2d2438d89~mv2.jpeg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/team.jpg" alt="Wirral Rise team" loading="lazy">
+      <img src="images/team.jpg" alt="Wirral Rise team" loading="lazy">
     </div>
     <div class="photo-strip-item">
-      <img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_600,h_440,al_c,q_85,usm_0.66_1.00_0.01/cookie-strip.jpg" alt="Cookie the therapy dog at Wirral Rise" loading="lazy">
+      <img src="images/cookie.jpg" alt="Cookie the therapy dog at Wirral Rise" loading="lazy">
     </div>
   </div>
 </div>
@@ -881,23 +963,23 @@
     </div>
     <div class="img-feature-grid">
       <div class="ig-main">
-        <img src="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_900,h_700,al_c,q_85,usm_0.66_1.00_0.01/hub-main.jpg" alt="The Wirral Rise therapeutic learning hub interior" loading="lazy">
+        <img src="images/hub.jpg" alt="The Wirral Rise therapeutic learning hub interior" loading="lazy">
         <div class="ig-caption">Our Therapeutic Hub in Upton Village</div>
       </div>
       <div class="ig-cell">
-        <img src="https://static.wixstatic.com/media/83a797_a5082089203b488b9b776d2b60d016b6~mv2.jpeg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/learning.jpg" alt="Child learning at Wirral Rise" loading="lazy">
+        <img src="images/learning.jpg" alt="Child learning at Wirral Rise" loading="lazy">
         <div class="ig-caption">Hands-on Learning</div>
       </div>
       <div class="ig-cell">
-        <img src="https://static.wixstatic.com/media/83a797_1346a042c23b46c7b171f1391ce0cc90~mv2.jpeg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/activity3.jpg" alt="Children doing activities at Wirral Rise" loading="lazy">
+        <img src="images/activity3.jpg" alt="Children doing activities at Wirral Rise" loading="lazy">
         <div class="ig-caption">Creative Activities</div>
       </div>
       <div class="ig-cell">
-        <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/outdoor.jpg" alt="Outdoor play and learning at Wirral Rise" loading="lazy">
+        <img src="images/activity.jpg" alt="Outdoor play and learning at Wirral Rise" loading="lazy">
         <div class="ig-caption">Outdoor Play &amp; Nature</div>
       </div>
       <div class="ig-cell">
-        <img src="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_600,h_400,al_c,q_85,usm_0.66_1.00_0.01/hub2.jpg" alt="Wirral Rise learning environment" loading="lazy">
+        <img src="images/hub2.jpg" alt="Wirral Rise learning environment" loading="lazy">
         <div class="ig-caption">Calm, Safe Spaces</div>
       </div>
     </div>
@@ -990,9 +1072,9 @@
       </div>
       <div class="quote-card">
         <div style="display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:200px 180px;gap:8px;margin-bottom:1.75rem;border-radius:var(--r-lg);overflow:hidden;">
-          <img src="https://static.wixstatic.com/media/83a797_3bc7bdd8a1fa4237bf36a8ce3991056c~mv2.jpg/v1/fill/w_600,h_520,al_c,q_85,usm_0.66_1.00_0.01/activity1.jpg" alt="Children enjoying outdoor learning activities at Wirral Rise" loading="lazy" style="grid-row:1/3;width:100%;height:100%;object-fit:cover;display:block;">
-          <img src="https://static.wixstatic.com/media/83a797_75956416b74749c8b23a1943e2678156~mv2.jpg/v1/fill/w_500,h_280,al_c,q_85,usm_0.66_1.00_0.01/activity2.jpg" alt="Children learning at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_500,h_260,al_c,q_85,usm_0.66_1.00_0.01/cookie2.jpg" alt="Cookie the therapy dog at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="images/activity.jpg" alt="Children enjoying outdoor learning activities at Wirral Rise" loading="lazy" style="grid-row:1/3;width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="images/play.jpg" alt="Children learning at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="images/cookie.jpg" alt="Cookie the therapy dog at Wirral Rise" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <blockquote>"Wirral Rise aims to offer a safe, nurturing and structured environment for children whose needs cannot be fully met in mainstream settings."</blockquote>
         <div class="qpts" role="list">
@@ -1008,7 +1090,7 @@
     <!-- Cookie Banner -->
     <div class="cookie-banner" role="region" aria-label="Meet Cookie, our therapy dog">
       <div class="cookie-paw" role="img" aria-label="Cookie the therapy dog">
-        <img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_220,h_220,al_c,q_85,usm_0.66_1.00_0.01/cookie.jpg" alt="Cookie the Wirral Rise therapy dog" width="110" height="110" loading="lazy">
+        <img src="images/cookie.jpg" alt="Cookie the Wirral Rise therapy dog" width="110" height="110" loading="lazy">
       </div>
       <div class="cookie-content">
         <h3>Meet Cookie — Our Therapy Dog</h3>
@@ -1186,25 +1268,25 @@
     </div>
     <div class="team-grid" role="list">
       <article class="tcard" role="listitem">
-        <div class="tavatar av1"><img src="https://static.wixstatic.com/media/83a797_7672a22b93a14caa8fd5c02477da75b1~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Jayne Foley, Director of Wirral Rise" width="80" height="80"></div>
+        <div class="tavatar av1"><img src="images/jayne.jpg" alt="Jayne Foley, Director of Wirral Rise" width="80" height="80"></div>
         <h3>Jayne Foley</h3>
         <p class="trole">Director</p>
         <span class="tqual">Designated Safeguarding Lead (DSL)</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av2"><img src="https://static.wixstatic.com/media/83a797_97a353ad5c1d44658b70d5f2f629140c~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Mike Jones, Provision Lead" width="80" height="80"></div>
+        <div class="tavatar av2"><img src="images/mike.jpg" alt="Mike Jones, Provision Lead" width="80" height="80"></div>
         <h3>Mike Jones</h3>
         <p class="trole">Provision Lead</p>
         <span class="tqual">Deputy DSL (DDSL)</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av3"><img src="https://static.wixstatic.com/media/83a797_e0030e51bb9f4cb3b665a23c762a9eaf~mv2.jpeg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Sam McHugh, Neurodevelopmental Practitioner" width="80" height="80"></div>
+        <div class="tavatar av3"><img src="images/sam.jpg" alt="Sam McHugh, Neurodevelopmental Practitioner" width="80" height="80"></div>
         <h3>Sam McHugh</h3>
         <p class="trole">Neurodevelopmental Practitioner &amp; Learning Facilitator</p>
         <span class="tqual">SENDCO</span>
       </article>
       <article class="tcard" role="listitem">
-        <div class="tavatar av4"><img src="https://static.wixstatic.com/media/83a797_a485911ff5084576befe80268e27df71~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/photo.jpg" alt="Cath Downs, Neurodevelopmental Practitioner" width="80" height="80"></div>
+        <div class="tavatar av4"><img src="images/cath.jpg" alt="Cath Downs, Neurodevelopmental Practitioner" width="80" height="80"></div>
         <h3>Cath Downs</h3>
         <p class="trole">Neurodevelopmental Practitioner &amp; Learning Facilitator</p>
       </article>
@@ -1220,7 +1302,7 @@
         <span class="tqual">Neurodevelopmental Practitioner</span>
       </article>
       <article class="tcard" role="listitem" style="grid-column: 2 / 3;">
-        <div class="tavatar av-dog"><img src="https://static.wixstatic.com/media/83a797_3f8f671f9d334bbc9816c31d2e167df6~mv2.jpg/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01/cookie.jpg" alt="Cookie the therapy dog at Wirral Rise" width="80" height="80"></div>
+        <div class="tavatar av-dog"><img src="images/cookie.jpg" alt="Cookie the therapy dog at Wirral Rise" width="80" height="80"></div>
         <h3>Cookie</h3>
         <p class="trole">Official Therapy Dog &amp; Chief Morale Officer</p>
         <span class="tqual">Head of Wellbeing</span>
@@ -1387,10 +1469,8 @@
         </div>
       </div>
       <div>
-        <form class="ct-form" action="https://formsubmit.co/admin@wirralrise.co.uk" method="POST" aria-label="Contact form" id="contactForm">
+        <form class="ct-form" action="https://formspree.io/f/YOUR_CONTACT_FORM_ID" method="POST" aria-label="Contact form" id="contactForm">
           <input type="hidden" name="_subject" value="New enquiry from Wirral Rise website" />
-          <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_template" value="table" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form-row">
             <div class="form-field">
@@ -1450,10 +1530,8 @@
         <h2 id="nl-h2">Be the First to Know</h2>
         <p>Sign up to our newsletter for updates on places, events and news from the Wirral Rise team — including Cookie.</p>
       </div>
-      <form class="nl-form" action="https://formsubmit.co/admin@wirralrise.co.uk" method="POST" aria-label="Newsletter signup">
-        <input type="hidden" name="_subject" value="New enquiry from Wirral Rise website" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_template" value="table" />
+      <form class="nl-form" action="https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID" method="POST" aria-label="Newsletter signup">
+        <input type="hidden" name="_subject" value="Newsletter signup — Wirral Rise" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="enquiry_type" value="newsletter">
         <input type="email" name="email" placeholder="Your email address" required aria-label="Email address for newsletter">
@@ -1477,9 +1555,8 @@
         <a href="#contact">Contact</a>
       </nav>
       <p class="ft-copy">
-        &copy; 2024 Wirral Rise. All rights reserved.<br>
-        <a href="/terms">Terms &amp; Conditions</a> &nbsp;|&nbsp;
-        <a href="/privacy">Privacy Policy</a>
+        &copy; 2026 Wirral Rise. All rights reserved.<br>
+        Wirral Rise &bull; Upton Village, Wirral CH49 0XB
       </p>
     </div>
   </div>
@@ -1489,6 +1566,44 @@
   function toggleMenu(btn){var m=document.getElementById('navMob');var o=m.classList.toggle('open');btn.setAttribute('aria-expanded',o);}
   function closeMenu(){document.getElementById('navMob').classList.remove('open');}
   document.addEventListener('click',function(e){if(!e.target.closest('.nav'))closeMenu();});
+
+  /* ===== FORMSPREE AJAX ===== */
+  async function submitToFormspree(form, successMsg) {
+    const btn = form.querySelector('[type="submit"]');
+    const origHTML = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        const el = document.createElement('p');
+        el.className = successMsg === 'nl' ? 'nl-success' : 'form-success';
+        el.textContent = successMsg === 'nl'
+          ? '✓ You\'re signed up — thanks!'
+          : '✓ Message received — we\'ll be in touch within one working day.';
+        form.replaceWith(el);
+      } else {
+        throw new Error('server');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = origHTML;
+      let err = form.querySelector('.form-error');
+      if (!err) { err = document.createElement('p'); err.className = 'form-error'; form.appendChild(err); }
+      err.textContent = 'Something went wrong — please try emailing admin@wirralrise.co.uk directly.';
+    }
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); submitToFormspree(this, 'contact');
+  });
+  document.querySelector('.nl-form').addEventListener('submit', function(e) {
+    e.preventDefault(); submitToFormspree(this, 'nl');
+  });
 </script>
 </body>
 </html>
