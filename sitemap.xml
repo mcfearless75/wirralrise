@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.wirralrise.co.uk/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/about.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/what-we-do.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/who-we-help.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/our-team.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/for-schools.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wirralrise.co.uk/contact.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.wirralrise.co.uk/terms.html</loc>
